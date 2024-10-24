@@ -1,0 +1,25 @@
+# Loading spam and non-spam data
+# Logistic Regression is a popular method to predict a categorical response. 
+# Probably one of the most common applications of the logistic regression is the message or email spam classification.
+# In this 3-part exercise, you'll create an email spam classifier with logistic regression using Spark MLlib. Here are the brief steps for creating a spam classifier.
+# Create an RDD of strings representing email.
+# Run MLlib’s feature extraction algorithms to convert text into an RDD of vectors.
+# Call a classification algorithm on the RDD of vectors to return a model object to classify new points.
+# Evaluate the model on a test dataset using one of MLlib’s evaluation functions.
+# In the first part of the exercise, you'll load the 'spam' and 'ham' (non-spam) files into RDDs, split the emails into individual words, and look at the first element in each of the RDD.
+
+
+
+# Feature hashing and LabelPoint
+# After splitting the emails into words, our raw data sets 'spam' and 'non-spam' are currently composed of 1-line messages.
+# In order to classify these messages, we need to convert text into features.
+# In the second part of the exercise, you'll first create a HashingTF() instance to map text to vectors of 200 features. 
+# Then for each message in 'spam' and 'non-spam' files you'll split them into words, and map each word to one feature. 
+# These are the features that will be used to decide whether a message is 'spam' or 'non-spam'.
+# Next, you'll create labels for features. For a valid message, the label will be 0 (i.e. the message is not spam) and for a 'spam' message, the label will be 1 (i.e. the message is spam). Finally, you'll combine both labeled datasets.
+
+
+# Logistic Regression model training
+# After creating labels and features for the data, we’re ready to build a model that can learn from it (training).
+# But before you train the model, in this final part of the exercise, you'll split the data into training and test, run Logistic Regression model on the training data, and finally check the accuracy of the model trained on training data.
+
